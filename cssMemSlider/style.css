@@ -107,7 +107,8 @@ img {
   transform: translate(-100em);
 }
 
-#dot4:checked ~ .slider-img{
+#dot4:checked ~ .slider-img,
+#dot4:checked ~ .slider-row .slider-in{
   transform: translate(-150em);
 }
 
