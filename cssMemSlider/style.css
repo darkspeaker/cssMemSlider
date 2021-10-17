@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background-color: rgb(97, 31, 158);
+  color: #fff;
+  font-size: 1rem;
+}
+
