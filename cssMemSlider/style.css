@@ -118,3 +118,8 @@ img {
 .slider-in .slider-in__caption{
   min-width: 50em;
 }
+
+.slider-components .slider-img,
+.slider-components .slider-in{
+  transition: ease-in-out .5s;
+}
