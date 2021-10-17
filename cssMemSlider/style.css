@@ -1,0 +1,125 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background-color: rgb(97, 31, 158);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider{
+  overflow: hidden;
+  height: auto;
+  max-width: 50em;
+}
+
+.slider-components {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-components input[type="radio"] {
+  display: none;
+}
+
+.slider-img{
+  width: 400%;
+}
+
+.slider-img img {
+  float: left;
+  width: 50em;
+  height: 30em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slider-row{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-desc{
+  height: 20px;
+  flex: 0 1 80%;
+  overflow: hidden;
+}
+
+
+.slider-dots{
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 1 20%;
+} 
+
+.slider-dots .label-dot{
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #fff;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+#dot1:checked ~ .slider-row .slider-dots .dot1,
+#dot2:checked ~ .slider-row .slider-dots .dot2,
+#dot3:checked ~ .slider-row .slider-dots .dot3,
+#dot4:checked ~ .slider-row .slider-dots .dot4{
+  background-color: #fff;
+}
+
+.slider-dots .label-dot:hover{
+  background-color: rgba(187, 187, 187, .6);
+}
+
+#dot1:checked ~ .slider-img,
+#dot1:checked ~ .slider-row .slider-in{
+  transform: translate(0);
+}
+
+#dot2:checked ~ .slider-img,
+#dot2:checked ~ .slider-row .slider-in{
+  transform: translate(-50em);
+}
+
+#dot3:checked ~ .slider-img,
+#dot3:checked ~ .slider-row .slider-in{
+  transform: translate(-100em);
+}
+
+#dot4:checked ~ .slider-img,
+#dot4:checked ~ .slider-row .slider-in{
+  transform: translate(-150em);
+}
+
+.slider-in{
+  display: flex;
+}
+.slider-in .slider-in__caption{
+  min-width: 50em;
+}
+
+.slider-components .slider-img,
+.slider-components .slider-in{
+  transition: ease-in-out .5s;
+}
